@@ -1,0 +1,63 @@
+.sandwich {
+  align-items: center;
+  background-color: $color-default-white;
+  border: none;
+  cursor: pointer;
+  display: flex;
+  height: 30px;
+  justify-content: center;
+  position: relative;
+  padding: 0;
+  transition: all ease-out 0.7s;
+  width: 30px;
+  z-index: 10;
+
+  @media screen and (min-width: $viewport--lg) {
+    display: none;
+  }
+
+  &__inner {
+    height: 18px;
+    position: relative;
+    width: 100%;
+  }
+
+  &__line {
+    background-color: $color-neon-blue;
+    display: block;
+    height: 2px;
+    left: 0;
+    position: absolute;
+    transition: all ease-out 0.3s;
+    width: 100%;
+
+    &--top {
+      top: 0;
+    }
+
+    &--middle {
+      top: 8px;
+    }
+
+    &--bottom {
+      top: 16px;
+    }
+  }
+}
+
+.sandwich--active .sandwich__line {
+  &--top {
+    top: 7px;
+    transform: rotate(45deg);
+  }
+
+  &--middle {
+    transform: translateX(-10px);
+    opacity: 0;
+  }
+
+  &--bottom {
+    top: 7px;
+    transform: rotate(-45deg);
+  }
+}

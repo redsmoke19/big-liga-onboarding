@@ -1,3 +1,25 @@
 .header {
-  display: block;
+  min-height: 74px;
+
+  &__wrapper {
+    align-items: center;
+    display: flex;
+    justify-content: space-between;
+    padding: 25px 0;
+  }
+
+  &__logo {
+    align-items: center;
+    display: flex;
+    //animation: heartbeat 1s infinite;
+  }
+
+  &__logo-icon {
+    overflow: inherit;
+  }
+
+  &__logo--heartbeat {
+    //animation: heartbeat 1s infinite;
+    transform: scale(1.2);
+  }
 }
