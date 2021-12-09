@@ -1,17 +1,19 @@
 .header {
+  align-items: center;
+  background-color: $color-default-white;
+  display: flex;
   min-height: 74px;
+  z-index: 5;
 
   &__wrapper {
     align-items: center;
     display: flex;
     justify-content: space-between;
-    padding: 25px 0;
   }
 
   &__logo {
     align-items: center;
     display: flex;
-    //animation: heartbeat 1s infinite;
   }
 
   &__logo-icon {
@@ -19,7 +21,6 @@
   }
 
   &__logo--heartbeat {
-    //animation: heartbeat 1s infinite;
-    transform: scale(1.2);
+    animation: heartbeat 1.2s infinite;
   }
 }

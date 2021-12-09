@@ -9,6 +9,18 @@
   pointer-events: none;
   transition: all ease-out 0.3s;
   visibility: hidden;
+  z-index: 5;
+
+  @media screen and (min-width: $viewport--lg) {
+    bottom: unset;
+    left: unset;
+    opacity: 1;
+    pointer-events: all;
+    position: relative;
+    right: unset;
+    top: unset;
+    visibility: visible;
+  }
 
   &--active {
     opacity: 1;
@@ -25,6 +37,13 @@
     margin: 0;
     padding: 0;
     transform: translateY(-37px);
+
+    @media screen and (min-width: $viewport--lg) {
+      flex-direction: row;
+      justify-content: unset;
+      transform: unset;
+      padding: 0 10px 0 0;
+    }
   }
 
   &__item {
@@ -32,16 +51,26 @@
 
     &:not(:last-child) {
       margin: 0 0 30px 0;
+
+      @media screen and (min-width: $viewport--lg) {
+        margin: 0 24px 0 0;
+      }
     }
   }
 
   &__link {
     color: $color-text;
+    display: block;
     font-size: 28px;
     font-weight: 500;
     line-height: 28px;
     position: relative;
     transition: opacity ease-out 0.15s;
+
+    @media screen and (min-width: $viewport--lg) {
+      font-size: 14px;
+      line-height: 14px;
+    }
 
     &--test {
       animation: shine 1s linear infinite;
@@ -59,6 +88,6 @@
   &__link-icon {
     position: absolute;
     top: 0;
-    right: -15px;
+    right: -10px;
   }
 }

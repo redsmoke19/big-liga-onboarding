@@ -1,0 +1,76 @@
+.hero {
+  align-items: center;
+  display: flex;
+
+  &__wrapper {
+    align-items: center;
+    display: flex;
+    height: calc(100vh - 74px);
+
+    @media screen and (min-width: $viewport--lg) {
+      display: grid;
+      gap: 40px;
+      grid-template-columns: 1fr 37%;
+    }
+  }
+
+  &__slogan {
+    transform: translateY(-37px);
+
+    @media screen and (min-width: $viewport--lg) {
+      transform: translateY(0);
+    }
+  }
+
+  &__title {
+    color: $color-neon-blue;
+    font-size: 96px;
+    font-weight: 400;
+    line-height: 96px;
+    margin: 0;
+  }
+
+  &__promo {
+    align-items: center;
+    background-color: $color-neon-blue;
+    bottom: 0;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    left: 0;
+    position: fixed;
+    right: 0;
+    top: 74px;
+    transform: translateX(-100%);
+    transition: all ease-out 0.3s;
+
+    &--active {
+      transform: translateX(0);
+    }
+
+    @media screen and (min-width: $viewport--lg) {
+      align-items: stretch;
+      background-color: transparent;
+      bottom: unset;
+      left: unset;
+      position: relative;
+      right: unset;
+      top: unset;
+      transform: translateX(0);
+    }
+  }
+
+  &__text {
+    color: $color-default-white;
+    font-size: 30px;
+    font-weight: 400;
+    line-height: 40px;
+    margin: 0 auto;
+    width: 46%;
+
+    @media screen and (min-width: $viewport--lg) {
+      color: $color-default-black;
+      width: auto;
+    }
+  }
+}

@@ -1,0 +1,77 @@
+.dino {
+  height: 85px;
+  margin: 0 0 35px 0;
+  position: relative;
+  width: 72px;
+
+  @media screen and (min-width: $viewport--lg) {
+    left: 100px;
+  }
+
+  &__lighting {
+    animation-fill-mode: forwards;
+    fill: $color-default-white;
+    position: absolute;
+  }
+
+  &__lighting--1 {
+    animation: lighting-1 ease-out 2s infinite;
+    height: 137px;
+    left: -100px;
+    top: -95px;
+    width: 79px;
+
+    @media screen and (min-width: $viewport--lg) {
+      fill: $color-vivid-violet;
+    }
+  }
+
+  &__lighting--2 {
+    animation: lighting-1 ease-out 2s infinite 0.2s;
+    height: 77px;
+    left: -20px;
+    top: -125px;
+    width: 21px;
+
+    @media screen and (min-width: $viewport--lg) {
+      fill: $color-torch-red;
+    }
+  }
+
+  &__lighting--3 {
+    animation: lighting-2 ease-out 2s infinite 0.1s;
+    height: 163px;
+    left: 55px;
+    top: -200px;
+    width: 107px;
+
+    @media screen and (min-width: $viewport--lg) {
+      fill: $color-neon-blue;
+    }
+  }
+
+  &__lighting--4 {
+    animation: lighting-2 ease-out 2s infinite 0.3s;
+    height: 50px;
+    top: -15px;
+    right: -84px;
+    width: 64px;
+
+    @media screen and (min-width: $viewport--lg) {
+      fill: $color-vivid-violet;
+    }
+  }
+
+  &__tongue {
+    animation: opacity ease-out 1.5s infinite;
+    fill: $color-default-white;
+
+    @media screen and (min-width: $viewport--lg) {
+      fill: $color-neon-blue;
+    }
+  }
+
+  &__zavr {
+    position: absolute;
+  }
+}
