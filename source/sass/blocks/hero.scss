@@ -66,10 +66,12 @@
 
   &.show {
     .hero__text {
-      animation-name: fade-to-bottom;
-      animation-duration: 0.6s;
-      animation-fill-mode: forwards;
-      animation-delay: 0.5s;
+      @media screen and (min-width: $viewport--lg) {
+        animation-name: fade-to-bottom;
+        animation-duration: 0.6s;
+        animation-fill-mode: forwards;
+        animation-delay: 0.5s;
+      }
     }
   }
 

@@ -670,6 +670,38 @@ template {
     -webkit-transform: translate(-50%, -50%) scale(0.4);
             transform: translate(-50%, -50%) scale(0.4); } }
 
+@-webkit-keyframes preloader-icon-close-desk {
+  0% {
+    left: 50%;
+    opacity: 1;
+    top: 50%;
+    -webkit-transform: translate(-50%, -50%) scale(1);
+            transform: translate(-50%, -50%) scale(1); }
+  80% {
+    opacity: 1; }
+  100% {
+    left: 11%;
+    opacity: 0;
+    top: 4%;
+    -webkit-transform: translate(-50%, -50%) scale(0.2);
+            transform: translate(-50%, -50%) scale(0.2); } }
+
+@keyframes preloader-icon-close-desk {
+  0% {
+    left: 50%;
+    opacity: 1;
+    top: 50%;
+    -webkit-transform: translate(-50%, -50%) scale(1);
+            transform: translate(-50%, -50%) scale(1); }
+  80% {
+    opacity: 1; }
+  100% {
+    left: 11%;
+    opacity: 0;
+    top: 4%;
+    -webkit-transform: translate(-50%, -50%) scale(0.2);
+            transform: translate(-50%, -50%) scale(0.2); } }
+
 @-webkit-keyframes logo-show {
   0% {
     opacity: 0; }
@@ -1180,15 +1212,16 @@ button,
         top: unset;
         -webkit-transform: translateX(0);
                 transform: translateX(0); } }
-  .hero.show .hero__text {
-    -webkit-animation-name: fade-to-bottom;
-            animation-name: fade-to-bottom;
-    -webkit-animation-duration: 0.6s;
-            animation-duration: 0.6s;
-    -webkit-animation-fill-mode: forwards;
-            animation-fill-mode: forwards;
-    -webkit-animation-delay: 0.5s;
-            animation-delay: 0.5s; }
+  @media screen and (min-width: 1024px) {
+    .hero.show .hero__text {
+      -webkit-animation-name: fade-to-bottom;
+              animation-name: fade-to-bottom;
+      -webkit-animation-duration: 0.6s;
+              animation-duration: 0.6s;
+      -webkit-animation-fill-mode: forwards;
+              animation-fill-mode: forwards;
+      -webkit-animation-delay: 0.5s;
+              animation-delay: 0.5s; } }
   .hero__promo--active {
     -webkit-transform: translateX(0);
             transform: translateX(0); }
@@ -1465,8 +1498,8 @@ button,
             animation-name: fade-in-top, shine;
     -webkit-animation-duration: 0.7s, 1.5s;
             animation-duration: 0.7s, 1.5s;
-    -webkit-animation-delay: 4s;
-            animation-delay: 4s;
+    -webkit-animation-delay: 3s;
+            animation-delay: 3s;
     -webkit-animation-timing-function: ease-out;
             animation-timing-function: ease-out;
     -webkit-animation-fill-mode: forwards;
@@ -1504,6 +1537,10 @@ button,
             animation-fill-mode: forwards;
     -webkit-animation-timing-function: ease-out;
             animation-timing-function: ease-out; }
+    @media screen and (min-width: 1024px) {
+      .preloader--inactive .preloader__icon {
+        -webkit-animation-name: preloader-icon-close-desk;
+                animation-name: preloader-icon-close-desk; } }
   .preloader--inactive .preloader__text {
     -webkit-animation-name: fade-in-bottom;
             animation-name: fade-in-bottom;
@@ -1544,8 +1581,8 @@ button,
           animation-name: opacity;
   -webkit-animation-duration: 0.8s;
           animation-duration: 0.8s;
-  -webkit-animation-delay: 2.8s;
-          animation-delay: 2.8s;
+  -webkit-animation-delay: 2.4s;
+          animation-delay: 2.4s;
   -webkit-animation-timing-function: ease-out;
           animation-timing-function: ease-out;
   -webkit-animation-fill-mode: forwards;
@@ -1555,8 +1592,8 @@ button,
 .preloader-logo__shield {
   -webkit-animation-name: heartbeat-big;
           animation-name: heartbeat-big;
-  -webkit-animation-duration: 2s;
-          animation-duration: 2s;
+  -webkit-animation-duration: 1.1s;
+          animation-duration: 1.1s;
   -webkit-animation-delay: 3.6s;
           animation-delay: 3.6s;
   -webkit-animation-timing-function: ease-out;
@@ -1567,8 +1604,8 @@ button,
 .preloader-logo__text {
   -webkit-animation-name: fade-in-top;
           animation-name: fade-in-top;
-  -webkit-animation-duration: 0.8s;
-          animation-duration: 0.8s;
+  -webkit-animation-duration: 0.5s;
+          animation-duration: 0.5s;
   -webkit-animation-delay: 1.8s;
           animation-delay: 1.8s;
   -webkit-animation-timing-function: ease-out;
