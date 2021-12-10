@@ -13,12 +13,12 @@ jobs:
           node-version: '12'
       # Build
       - name: Install dependencies
-        run: npm ci
+        run: npm i
       - name: Build
         run: npm run build
       - name: Deploy 🚀
         uses: JamesIves/github-pages-deploy-action@4.1.4
         with:
           branch: gh-pages
-          folder: dist
+          folder: build
           clean: true
