@@ -1,4 +1,5 @@
 import {enableScrolling} from '../utils/scroll-lock';
+import {preloaderText} from "./preloader";
 
 const getResize = () => {
   const breakpointTablet = window.matchMedia('(min-width: 1024px)');
@@ -18,6 +19,7 @@ const getResize = () => {
     }
   }
   function actualResizeHandler() {
+    preloaderText();
     if (breakpointTablet.matches === true) {
       if (promo.classList.contains('hero__promo--active')) {
         promo.classList.remove('hero__promo--active');

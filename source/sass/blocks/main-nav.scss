@@ -14,7 +14,6 @@
   @media screen and (min-width: $viewport--lg) {
     bottom: unset;
     left: unset;
-    opacity: 1;
     pointer-events: all;
     position: relative;
     right: unset;
@@ -89,5 +88,16 @@
     position: absolute;
     top: 0;
     right: -10px;
+  }
+}
+
+.main-nav.show {
+  @media screen and (min-width: $viewport--lg) {
+    animation-name: fade-in-top;
+    animation-delay: 0.5s;
+    animation-fill-mode: forwards;
+    animation-timing-function: ease-out;
+    animation-duration: 0.8s;
+    opacity: 0;
   }
 }

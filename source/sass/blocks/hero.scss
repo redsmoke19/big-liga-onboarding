@@ -27,7 +27,15 @@
     font-size: 96px;
     font-weight: 400;
     line-height: 96px;
+    opacity: 0;
     margin: 0;
+
+    &.show {
+      animation-name: fade-in-top;
+      animation-fill-mode: forwards;
+      animation-delay: 0.5s;
+      animation-duration: 0.8s;
+    }
   }
 
   &__promo {
@@ -42,11 +50,7 @@
     right: 0;
     top: 74px;
     transform: translateX(-100%);
-    transition: all ease-out 0.3s;
-
-    &--active {
-      transform: translateX(0);
-    }
+    transition: all ease-out 0.6s;
 
     @media screen and (min-width: $viewport--lg) {
       align-items: stretch;
@@ -60,16 +64,84 @@
     }
   }
 
+  &.show {
+    .hero__text {
+      animation-name: fade-to-bottom;
+      animation-duration: 0.6s;
+      animation-fill-mode: forwards;
+      animation-delay: 0.5s;
+    }
+  }
+
+  &__promo--active {
+    transform: translateX(0);
+
+    .dino__lighting--1 {
+      animation-name: move, lighting-1;
+      animation-timing-function: ease-out, ease-out;
+      animation-duration: 0.5s, 2s;
+      animation-delay: 3.6s, 4s;
+      animation-iteration-count: 1, infinite;
+    }
+
+    .dino__lighting--2 {
+      animation-name: move, lighting-1;
+      animation-timing-function: ease-out, ease-out;
+      animation-duration: 0.5s, 2s;
+      animation-delay: 3.8s, 4.3s;
+      animation-iteration-count: 1, infinite;
+    }
+
+    .dino__lighting--3 {
+      animation-name: move-2, lighting-2;
+      animation-timing-function: ease-out, ease-out;
+      animation-duration: 0.5s, 2s;
+      animation-delay: 4.1s, 4.6s;
+      animation-iteration-count: 1, infinite;
+    }
+
+    .dino__lighting--4 {
+      animation-name: move-2, lighting-2;
+      animation-timing-function: ease-out, ease-out;
+      animation-duration: 0.5s, 2s;
+      animation-delay: 4.4s, 4.9s;
+      animation-iteration-count: 1, infinite;
+    }
+
+    .dino__zavr {
+      animation-fill-mode: forwards;
+      animation-name: dino-zavr;
+      animation-timing-function: ease-out;
+      animation-duration: 3.5s;
+      animation-delay: 0.2s;
+    }
+
+    .hero__text {
+      animation-fill-mode: forwards;
+      animation-name: fade-in-left;
+      animation-timing-function: ease-out;
+      animation-duration: 1s;
+      animation-delay: 0.2s;
+    }
+  }
+
   &__text {
+    animation-name: non-opacity;
+    animation-timing-function: ease-out;
+    animation-duration: 0.3s;
+    animation-fill-mode: forwards;
     color: $color-default-white;
     font-size: 30px;
     font-weight: 400;
     line-height: 40px;
+    opacity: 0;
     margin: 0 auto;
     width: 46%;
 
     @media screen and (min-width: $viewport--lg) {
+      animation-name: unset;
       color: $color-default-black;
+      opacity: 0;
       width: auto;
     }
   }

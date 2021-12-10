@@ -18,15 +18,41 @@
   }
 }
 
+@keyframes heartbeat-big {
+  0% {
+    transform: translate(0, 0) scale(1);
+  }
+
+  20% {
+    transform: translate(-56px, -3px) scale(1.2);
+  }
+
+  40% {
+    transform: translate(-141px, -11px) scale(1.5);
+  }
+}
+
 @keyframes move {
-  from {
-    transform: translateX(20);
+  0% {
     opacity: 0;
+    transform: translateX(-20%) translateY(-20%);
   }
 
   to {
-    transform: translateX(0);
     opacity: 1;
+    transform: translateX(0) translateY(0);
+  }
+}
+
+@keyframes move-2 {
+  0% {
+    opacity: 0;
+    transform: translateX(20%) translateY(-20%);
+  }
+
+  to {
+    opacity: 1;
+    transform: translateX(0) translateY(0);
   }
 }
 
@@ -51,6 +77,146 @@
 }
 
 @keyframes opacity {
+  0% {
+    opacity: 0;
+  }
+
+  100% {
+    opacity: 1;
+  }
+}
+
+@keyframes non-opacity {
+  0% {
+    opacity: 1;
+  }
+
+  100% {
+    opacity: 0;
+  }
+}
+
+@keyframes dino-zavr {
+  0% {
+    opacity: 0;
+    transform: translateX(-1000%) translateY(-300%);
+  }
+
+  40% {
+    opacity: 1;
+    transform: translateX(-250%) translateY(0);
+  }
+
+  55% {
+    transform: translateX(-200%) translateY(-30%);
+  }
+
+  70% {
+    transform: translateX(-150%) translateY(0);
+  }
+
+  85% {
+    transform: translateX(-100%) translateY(-30%);
+  }
+
+  to {
+    opacity: 1;
+    transform: translateX(0) translateY(0);
+  }
+}
+
+@keyframes fade-in-left {
+  from {
+    opacity: 0;
+    transform: translateX(-80px);
+  }
+
+  to {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+
+@keyframes letter-fade {
+  from {
+    opacity: 0;
+    transform: translateX(-120px);
+  }
+
+  to {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+
+@keyframes fade-in-top {
+  from {
+    opacity: 0;
+    transform: translateY(-100px);
+  }
+
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes fade-in-bottom {
+  from {
+    opacity: 1;
+    transform: translateY(0);
+  }
+
+  to {
+    opacity: 0;
+    transform: translateY(100px);
+  }
+}
+
+@keyframes fade-to-bottom {
+  from {
+    opacity: 0;
+    transform: translateY(60px);
+  }
+
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes preloader-close {
+  0% {
+    background-color: rgba($color-default-white, 1);
+  }
+
+  100% {
+    background-color: rgba($color-default-white, 0);
+    pointer-events: none;
+  }
+}
+
+@keyframes preloader-icon-close {
+  0% {
+    left: 50%;
+    opacity: 1;
+    top: 50%;
+    transform: translate(-50%, -50%) scale(1);
+  }
+
+  80% {
+    opacity: 1;
+  }
+
+  100% {
+    left: 16%;
+    opacity: 0;
+    top: 4%;
+    transform: translate(-50%, -50%) scale(0.4);
+  }
+}
+
+@keyframes logo-show {
   0% {
     opacity: 0;
   }

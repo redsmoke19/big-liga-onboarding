@@ -7,7 +7,7 @@
 
 </head>
 <body>
-
+@@include("source/html/preloader.html")
 <div style="display: none;">
   @@include("build/img/sprite_auto.svg")
 </div>
@@ -16,14 +16,14 @@
   @@include("source/html/base/header.html")
 
   <main>
-    <section class="hero">
+    <section class="hero" data-show>
       <div class="container">
         <div class="hero__wrapper">
           <div class="hero__slogan">
-            <h1 class="hero__title">Вёрстка и фронтенд любой сложности</h1>
+            <h1 class="hero__title" data-show>Вёрстка и фронтенд любой сложности</h1>
           </div>
           <div class="hero__promo">
-            <div class="dino">
+            <div class="dino" data-show>
               <svg class="dino__lighting dino__lighting--1" width="79" height="137" viewBox="0 0 79 137"
                    xmlns="http://www.w3.org/2000/svg">
                 <path
@@ -152,7 +152,6 @@
   @@include("source/html/base/footer.html")
 </div>
 
-<script src="js/vendor.min.js"></script>
 <script src="js/main.min.js"></script>
 </body>
 </html>
