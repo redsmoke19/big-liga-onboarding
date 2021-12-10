@@ -11,4 +11,3 @@ const showPromo = () => {
 };
 
 export {showPromo};
-

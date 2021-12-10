@@ -1,5 +1,5 @@
 import {enableScrolling} from '../utils/scroll-lock';
-import {preloaderText} from "./preloader";
+import {preloaderText} from './preloader';
 
 const getResize = () => {
   const breakpointTablet = window.matchMedia('(min-width: 1024px)');

@@ -16,7 +16,7 @@ const preloaderCloseHandler = () => {
 const preloadClose = (e) => {
   if (e.target.closest('.preloader')) {
     preloaderElement.classList.add('preloader--inactive');
-    showElements.forEach(item => {
+    showElements.forEach((item) => {
       item.classList.add('show');
     });
   }
@@ -27,7 +27,7 @@ const preloadClose = (e) => {
 const preloaderEnterClose = (e) => {
   if (e.keyCode === ENTER_KEYCODE) {
     preloaderElement.classList.add('preloader--inactive');
-    showElements.forEach(item => {
+    showElements.forEach((item) => {
       item.classList.add('show');
     });
   }

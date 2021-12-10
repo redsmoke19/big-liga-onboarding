@@ -3,7 +3,7 @@ import {iosVhFix} from './utils/ios-vh-fix';
 import {getSandwich} from './modules/sandwich';
 import {showPromo} from './modules/promo-show';
 import {getResize} from './modules/rezise';
-import {preloaderText, preloader} from "./modules/preloader";
+import {preloaderText, preloader} from './modules/preloader';
 
 import {initModals} from './modules/init-modals';
 
